@@ -27,4 +27,5 @@ jobs:
               with:
                   name: dist
             - uses: actions/upload-pages-artifact@v3
-              path: dist
+              with:
+                path: dist
