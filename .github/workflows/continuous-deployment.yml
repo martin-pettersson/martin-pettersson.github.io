@@ -11,9 +11,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - run: |
-                mkdir dist
-                cp index.html dist
+            - id: restore
+              uses: actions/cache@v4
+              with:
+                  key: ${{ runner.os }}-restore-${{ hashFiles('package-lock.json') }}
+                  path: node_modules
+            - if: steps.restore.outputs.cache-hit != 'true'
+              run: npm clean-install
+            - run: npm run build
             - uses: actions/upload-artifact@v4
               with:
                   name: dist

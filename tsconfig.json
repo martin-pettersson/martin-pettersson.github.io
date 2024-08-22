@@ -1,0 +1,38 @@
+{
+    "include": [
+        "resources/typescript/**/*"
+    ],
+    "compilerOptions": {
+        "outDir": "dist",
+        "rootDir": "resources/typescript",
+        "baseUrl": ".",
+        "paths": {
+            "martin-pettersson.github.io": [
+                "resources/typescript/index.js"
+            ],
+            "martin-pettersson.github.io/*": [
+                "resources/typescript/*"
+            ]
+        },
+        "target": "esnext",
+        "module": "nodenext",
+        "declaration": true,
+        "sourceMap": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "useUnknownInCatchVariables": false,
+        "moduleResolution": "nodenext",
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": [
+            "esnext",
+            "dom"
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "root": true,
+    "extends": [
+        "@n7e/typescript-coding-standard"
+    ]
+}
